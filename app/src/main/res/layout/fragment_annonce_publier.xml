@@ -1,0 +1,112 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_height="match_parent"
+              tools:context="com.tropi.dvjl.tropicom.Annonceur.AnnoncePublier">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@id/bar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            app:layout_scrollFlags="scroll"
+            android:background="@color/stay_color"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true" />
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="bottom"
+                android:padding="10dip"
+                app:centered="true"
+                app:fillColor="@color/colorPrimary"
+                app:pageColor="#fff"
+                app:snap="true" />
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/wave"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_annonce"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="0dp"
+            android:fitsSystemWindows="true"
+            android:gravity="center"
+            android:headerDividersEnabled="false"
+            android:numColumns="auto_fit"
+            android:scrollbars="none"
+           />
+
+    </jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout>
+
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/progess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/msg"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Problème de connexion !, Tirer vers le bas pour actualiser"
+            android:textSize="18dp"/>
+
+        <Button
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:id="@+id/actu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/msg"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="95dp"
+            android:text="Actualiser"
+            />
+
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        app:floating_title="Ajouter"
+        app:floating_title_color="@android:color/white"
+        app:floating_background_color="@color/color_action"
+        android:id="@+id/action_flot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/list_annonce"
+        app:layout_anchorGravity="bottom|center_horizontal"
+        app:floating_left_icon="@drawable/ic_add_btn"
+        />
+
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

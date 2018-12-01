@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.tropi.dvjl.tropicom.Annonceur.Annonce2">
+
+    <include layout="@layout/file_bar"
+             android:id="@+id/bar"/>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_below="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_below="@+id/bar"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp">
+
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="@string/type_de_produit"
+                android:drawableLeft="@drawable/ic_produit"
+                android:drawablePadding="5dp"
+                android:id="@+id/spinner_type"
+                />
+
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/autr"
+                android:padding="10dp"
+                android:background="@drawable/bg_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:drawablePadding="5dp"
+                android:hint="Autre produit"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimary"
+                android:text="Quelle est la quantité de votre produit ?" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:padding="10dp"
+                    android:background="@drawable/bg_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:id="@+id/qte"
+                    android:drawableLeft="@drawable/ic_qte"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="@string/quantit"/>
+            </LinearLayout>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimary"
+                android:text="Sélectionnez une unité de mesure" />
+
+            <RadioGroup
+                android:background="@drawable/bg_edit"
+                android:padding="10dp"
+                android:gravity="end"
+                android:weightSum="2"
+                android:id="@+id/group"
+                android:layout_gravity="end|center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/ra1"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Kg"
+                    android:textSize="15dp"
+                    android:layout_marginRight="10dp"/>
+                <RadioButton
+                    android:id="@+id/ra2"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="15dp"
+                    android:text="Tonne(T)"
+                    />
+            </RadioGroup>
+
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimary"
+                android:text="Quel est le prix unitaire de votre produit ?"/>
+            <EditText
+                android:padding="15dp"
+                android:background="@drawable/bg_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/prix_unitaire"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="@string/prix_unitaire_xof"/>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimary"
+                android:text="Calcul du prix de vente"/>
+
+            <EditText
+                android:padding="15dp"
+                android:background="@drawable/bg_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:drawablePadding="5dp"
+                android:id="@+id/prix_vente"
+                android:fontFamily="sans-serif-condensed"
+                android:inputType="number"
+                android:hint="@string/prix_de_vente_xof"/>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/ajouter_trois_photos"
+                android:textColor="@color/colorPrimary"/>
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/il_s_agit_de_la_photo_du_magasin_du_camion_ou_du_lieu_d_entrepotage"/>
+            <LinearLayout
+                android:visibility="gone"
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:layout_weight="1"
+                    android:id="@+id/card1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="10dp">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/img1"
+                        android:padding="10dp"
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/ic_tof"/>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_weight="1"
+                    android:id="@+id/card2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="10dp">
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:padding="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/ic_tof"/>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_weight="1"
+                    android:id="@+id/card3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="10dp">
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:padding="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/ic_tof"/>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Suivant"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/btnsuivant"
+                android:textColor="@color/blanc"
+                android:background="@drawable/bord"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

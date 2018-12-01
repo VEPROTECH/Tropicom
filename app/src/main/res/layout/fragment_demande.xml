@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              tools:context="com.tropi.dvjl.tropicom.Demandes.Demande">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9.5">
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/bar"
+            android:id="@+id/list_annonce"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="0dp"
+            android:gravity="center"
+            android:fitsSystemWindows="true"
+            android:headerDividersEnabled="false"
+            android:numColumns="auto_fit"
+            android:scrollbars="none" />
+
+        <ProgressBar
+            android:id="@+id/progess"
+            android:layout_alignBottom="@+id/msg"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:text="Problème de connexion !"
+            android:layout_centerInParent="true"/>
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/actu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignTop="@+id/msg"
+            android:text="Actualiser"
+            />
+
+    </RelativeLayout>
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        app:floating_title="Ajouter"
+        app:floating_title_color="@android:color/white"
+        app:floating_background_color="@color/color_action"
+        android:id="@+id/action_flot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        app:floating_left_icon="@drawable/ic_add_btn"
+        />
+
+
+
+</LinearLayout>

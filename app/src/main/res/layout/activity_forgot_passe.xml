@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    tools:context="com.tropi.dvjl.tropicom.ForgotPasse">
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/tropicom"/>
+    <TextView
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Réinitialisation du mot de passe !"/>
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/pick"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_showNameCode="false"
+        app:ccp_defaultLanguage="FRENCH"
+        android:fontFamily="sans-serif-condensed"
+        app:ccp_showFlag="true"
+        app:ccp_autoDetectLanguage="true"
+        app:ccp_showFullName="true"
+        app:ccp_showPhoneCode="true"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:maxLines="1"
+            android:id="@+id/phone"
+            android:inputType="phone"
+            android:drawablePadding="5dp"
+            android:hint="@string/votre_num_ro_de_t_l_phone"
+            android:drawableLeft="@drawable/ic_phone" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+
+        >
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:maxLines="1"
+            android:id="@+id/passe"
+            android:drawablePadding="5dp"
+            android:inputType="textPassword"
+            android:hint="@string/mot_de_passe"
+            android:drawableLeft="@drawable/ic_pax" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+
+        >
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:maxLines="1"
+            android:id="@+id/passe2"
+            android:drawablePadding="5dp"
+            android:inputType="textPassword"
+            android:hint="Confirmation"
+            android:drawableLeft="@drawable/ic_pax" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_height="wrap_content"
+        android:text="Réinitialiser"
+        android:id="@+id/connect"
+        android:textColor="@color/blanc"
+        android:background="@drawable/bord"/>
+
+
+</LinearLayout>

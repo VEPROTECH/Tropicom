@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tropi.dvjl.tropicom.TypeConnexion">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/slide3"
+        android:scaleType="centerCrop"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#96000000"/>
+
+
+    <LinearLayout
+        android:layout_above="@+id/linear"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/quali_tropicom"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blanc"
+            android:layout_marginBottom="20dp"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:layout_below="@+id/img"
+            android:text="Achetez et vendez des produits tropicaux sur Tropicom en quelque clic !"/>
+
+        <Button
+            android:padding="5dp"
+            android:textColor="@color/blanc"
+            android:background="@drawable/bord"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:id="@+id/conti_tel"
+            android:layout_height="wrap_content"
+            android:text="Continuer avec votre numéro"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:drawableLeft="@drawable/ic_phoneimg"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blanc"
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_below="@+id/img"
+            android:text="OU"/>
+
+
+        <Button
+            android:id="@+id/facebook"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/blanc"
+            android:background="@drawable/bordface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continuer avec facebook"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:drawableLeft="@drawable/fe"/>
+
+
+        <Button
+            android:id="@+id/google"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/goog"
+            android:textColor="@color/blanc"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:text="Continuer avec votre compte Gmail"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/goo"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

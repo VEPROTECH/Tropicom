@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tropi.dvjl.tropicom.Demandes.addDemande">
+
+    <include layout="@layout/file_bar"
+             android:id="@+id/bar"/>
+
+    <ScrollView
+        android:layout_below="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+            <EditText
+                android:id="@+id/phone"
+                android:padding="10dp"
+                android:background="@drawable/bg_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:fontFamily="sans-serif-condensed"
+                android:drawablePadding="5dp"
+                android:hint="@string/votre_num_ro_de_t_l_phone"
+                android:drawableLeft="@drawable/ic_phone" />
+
+            <View
+
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="@string/type_de_produit"
+                android:drawableLeft="@drawable/ic_produit"
+                android:drawablePadding="5dp"
+                android:id="@+id/spinner_type"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimary"
+                android:text="Quelle est la quantité de produit voulue?" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:padding="10dp"
+                    android:background="@drawable/bg_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:id="@+id/qte"
+                    android:drawableLeft="@drawable/ic_qte"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="@string/quantit"/>
+            </LinearLayout>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimary"
+                android:text="Sélectionnez une unité de mesure" />
+            <RadioGroup
+                android:background="@drawable/bg_edit"
+                android:padding="10dp"
+                android:gravity="end"
+                android:weightSum="2"
+                android:id="@+id/group"
+                android:layout_gravity="end|center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/ra1"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Kg"
+                    android:textSize="15dp"
+                    android:layout_marginRight="10dp"/>
+                <RadioButton
+                    android:id="@+id/ra2"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="15dp"
+                    android:text="Tonne(T)"
+                    />
+            </RadioGroup>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/autr"
+                android:padding="10dp"
+                android:background="@drawable/bg_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:drawablePadding="5dp"
+                android:hint="Autre produit"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimary"
+                android:text="Donnez le nom du produit"/>
+            <EditText
+                android:background="@drawable/bg_edit"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/libelle"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/ic_title"
+                android:fontFamily="sans-serif-condensed"
+                android:drawablePadding="5dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/titre_de_l_annonce"/>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimary"
+                android:text="Quelle est la qualité de votre produit ?"/>
+
+
+            <com.hbb20.CountryCodePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showNameCode="false"
+                android:id="@+id/pays"
+                app:ccp_defaultLanguage="ENGLISH"
+                android:fontFamily="sans-serif-condensed"
+                app:ccp_showFlag="true"
+                app:ccp_autoDetectLanguage="true"
+                app:ccp_showFullName="true"
+                app:ccp_showPhoneCode="false"
+                />
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/city"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_height="wrap_content"
+                android:hint="@string/ville_ou_village"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimary"
+                android:text="Donnez une bref description du produit"/>
+
+            <EditText
+                android:background="@drawable/bg_edit"
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:scrollbars="vertical"
+                android:hint="Bref description du produit..."
+                android:gravity="top"
+                android:padding="10dp"
+                android:inputType="textMultiLine"
+                />
+
+            <Button
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_height="wrap_content"
+                android:text="suivant"
+                android:id="@+id/btnsuivant"
+                android:textColor="@color/blanc"
+                android:background="@drawable/bord"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

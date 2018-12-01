@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.tropi.dvjl.tropicom.Inscription">
+    <include layout="@layout/file_bar"
+             android:id="@+id/bar"/>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_below="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:text="Voulez-vous connecter en tant que :"/>
+
+            <RadioGroup
+                android:id="@+id/group"
+                android:weightSum="2"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rad1"
+                    android:layout_weight="1"
+                    android:text="Acheteur"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:id="@+id/rad2"
+                    android:layout_weight="1"
+                    android:layout_gravity="end"
+                    android:text="Vendeur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RadioGroup>
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/pays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showNameCode="false"
+                app:ccp_defaultLanguage="ENGLISH"
+                android:fontFamily="sans-serif-condensed"
+                app:ccp_showFlag="true"
+                app:ccp_autoDetectLanguage="true"
+                app:ccp_showFullName="true"
+                app:ccp_showPhoneCode="true"
+                />
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+
+            <LinearLayout
+                android:id="@+id/linea"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/societe"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="textPersonName"
+                    android:drawablePadding="5dp"
+                    android:hint="Votre société" />
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/img_bg"/>
+            </LinearLayout>
+
+
+
+            <EditText
+                android:id="@+id/ville"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/bg_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:inputType="textPersonName"
+                android:drawablePadding="5dp"
+                android:hint="Ville ou village" />
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/phone"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/bg_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:inputType="textPersonName"
+                android:drawablePadding="5dp"
+                android:hint="Entrer un numéro de téléphone valide" />
+
+            <Button
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_height="wrap_content"
+                android:text="Suivant"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/inscrit"
+                android:textColor="@color/blanc"
+                android:background="@drawable/bord"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_height="wrap_content"
+                android:text="Annuler"
+                android:layout_marginBottom="50dp"
+                android:id="@+id/retour"
+                android:textColor="@color/blanc"
+                android:background="@drawable/bordg"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

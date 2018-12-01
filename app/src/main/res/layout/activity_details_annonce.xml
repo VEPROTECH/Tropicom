@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    tools:context="com.tropi.dvjl.tropicom.Annonceur.DetailsAnnonce">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/appBarLayout">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:background="@color/stay_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|snap"
+            android:fitsSystemWindows="true">
+            <RelativeLayout
+
+                android:background="@color/stay_color"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"/>
+                <RelativeLayout
+                    android:background="@color/stay_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" >
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentTop="true" />
+
+                    <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="bottom"
+                        android:padding="10dip"
+                        app:centered="true"
+                        app:fillColor="@color/colorPrimary"
+                        app:pageColor="#fff"
+                        app:snap="false" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/layout_action1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_share_black_18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Partager"
+                        android:textColor="@color/gen_black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/view_width_small"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey_light" />
+
+                <LinearLayout
+                    android:id="@+id/layout_action2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_filter_none_black_18dp" />
+
+                    <TextView
+                        android:id="@+id/text_action2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Similaire"
+                        android:textColor="@color/gen_black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/view_width_small"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey_light" />
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                app:cardUseCompatPadding="true"
+                app:cardElevation="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/title_annonce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Vente de mais et du riz" />
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/prix"
+                            android:text="2000"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="sans-serif-condensed"
+                            android:singleLine="true"
+                            android:textSize="23dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:paddingRight="5dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_world" />
+
+                        <TextView
+                            android:fontFamily="sans-serif-condensed"
+                            android:id="@+id/dt_pays"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bénin" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:paddingRight="5dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_produit" />
+
+                        <TextView
+                            android:id="@+id/dt_type"
+                            android:fontFamily="sans-serif-condensed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mil" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:paddingRight="5dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_time" />
+
+                        <TextView
+                            android:id="@+id/day"
+                            android:fontFamily="sans-serif-condensed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Aujourd'hui, 10:00" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                app:cardUseCompatPadding="true"
+                app:cardElevation="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Détails du produit"
+                        android:textColor="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_marginTop="3dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:fontFamily="sans-serif-condensed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/conditionnement_" />
+
+                        <TextView
+                            android:id="@+id/dt_condi"
+                            android:gravity="end"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Vente de mais et du riz" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:fontFamily="sans-serif-condensed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/quantit_" />
+
+                        <TextView
+                            android:gravity="end"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textStyle="bold"
+                            android:id="@+id/dt_qte"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="5 Kg"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/prix_unitaire_" />
+
+                        <TextView
+                            android:fontFamily="sans-serif-condensed"
+                            android:textStyle="bold"
+                            android:gravity="end"
+                            android:id="@+id/dt_prix"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="5000 fcfa" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                app:cardUseCompatPadding="true"
+                app:cardElevation="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Qualité du produit"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:fontFamily="sans-serif-condensed"
+                        android:id="@+id/dt_qlite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Vente de mais et du riz" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                app:cardUseCompatPadding="true"
+                app:cardElevation="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Description du produit"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/desciption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Description du produit ici" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/n_oubliez_pas_de_mentionnez_tropicom_lorsque_vous_contacter_l_annonceur" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_marginBottom="50dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/linear"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/quali_tropicom" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="21sp"
+                    android:id="@+id/annonceur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="John Doe" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/dt_contact"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Le nom ici" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ru.dimorinny.floatingtextbutton.FloatingTextButton
+            android:id="@+id/action_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            app:floating_background_color="@color/color_action"
+            app:floating_left_icon="@drawable/ic_sms"
+            app:floating_title="message"
+            app:floating_title_color="@android:color/white"
+            />
+        <ru.dimorinny.floatingtextbutton.FloatingTextButton
+            android:id="@+id/action_flot"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            app:floating_background_color="@color/color_action"
+            app:floating_left_icon="@drawable/ic_call"
+            app:floating_title="Appele-le"
+            app:floating_title_color="@android:color/white"
+            />
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Tropicom</string>
+
+    <string name="FACEBOOK_APP_ID">343002059434224</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">bfccae5054e52e3e36ec929c86c8fe1a</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="type_de_produit">Type de produit</string>
+    <string name="titre_de_l_annonce">Titre de l\'annonce</string>
+    <string name="quantit">Quantité</string>
+    <string name="qualit_optionel">Qualité (Optionel)</string>
+    <string name="votre_num_ro_de_t_l_phone">Votre numéro de téléphone</string>
+    <string name="ville_ou_village">Ville ou village</string>
+    <string name="prix_de_vente_xof">Prix de vente (XOF)</string>
+    <string name="prix_unitaire_xof">Prix unitaire</string>
+    <string name="prix_unitaire_tonne">Prix unitaire par Tonne (XOF)</string>
+    <string name="prix_unitaire_kg">Prix unitaire par Kg (XOF)</string>
+    <string name="ajouter_trois_photos">Ajouter trois photos</string>
+    <string name="il_s_agit_de_la_photo_du_magasin_du_camion_ou_du_lieu_d_entrepotage">Il s\'agit de la photo du magasin, du camion ou du lieu d\'entrepotage</string>
+    <string name="restez_connecter_pour_ne_rien_rat_sur_tropicom">Restez connecter pour ne rien raté sur Tropicom.</string>
+    <string name="connexion">Connexion !</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="enregistrer">Enregistrer</string>
+    <string name="se_connecter">Se connecter</string>
+    <string name="votre_nom">Votre nom</string>
+    <string name="type_de_condionnement">Type de condionnement</string>
+    <string name="type_de_compte">Type de compte</string>
+    <string name="annonce">Annonce</string>
+    <string name="quantit_">Quantité :</string>
+    <string name="prix_unitaire_">Prix unitaire :</string>
+    <string name="n_oubliez_pas_de_mentionnez_tropicom_lorsque_vous_contacter_l_annonceur">N\'oubliez pas de mentionnez Tropicom lorsque vous contacter l\'annonceur.</string>
+    <string name="conditionnement_">Conditionnement :</string>
+    <string name="next">Suivant</string>
+    <string name="skip">Précédent</string>
+    <string name="start">Démarrer</string>
+</resources>

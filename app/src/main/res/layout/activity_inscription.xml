@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tropi.dvjl.tropicom.Inscription">
+    <include layout="@layout/file_bar"
+        android:id="@+id/bar"/>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_below="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/tropicom"/>
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:hint="@string/type_de_compte"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/compte"
+                />
+
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/pays"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showNameCode="false"
+                app:ccp_defaultLanguage="ENGLISH"
+                android:fontFamily="sans-serif-condensed"
+                app:ccp_showFlag="true"
+                app:ccp_autoDetectLanguage="true"
+                app:ccp_showFullName="true"
+                app:ccp_showPhoneCode="true"
+                />
+                <EditText
+                    android:visibility="gone"
+                    android:id="@+id/phone"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="phone"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/votre_num_ro_de_t_l_phone" />
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+
+            <EditText
+                android:id="@+id/nom"
+                android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="textPersonName"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/votre_nom"
+                     />
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+            <EditText
+                android:id="@+id/prenom"
+                android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="textPersonName"
+                    android:drawablePadding="5dp"
+                    android:hint="Votre prénom" />
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+
+            <LinearLayout
+                android:id="@+id/linea"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/societe"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="textPersonName"
+                    android:drawablePadding="5dp"
+                    android:hint="Votre société" />
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/img_bg"/>
+            </LinearLayout>
+
+
+
+                <EditText
+                    android:id="@+id/ville"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="textPersonName"
+                    android:drawablePadding="5dp"
+                    android:hint="Ville ou village" />
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+
+                <EditText
+                    android:id="@+id/passe1"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:drawablePadding="5dp"
+                    android:inputType="textPassword"
+                    android:hint="@string/mot_de_passe" />
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+
+                <EditText
+                    android:id="@+id/passe2"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:drawablePadding="5dp"
+                    android:inputType="textPassword"
+                    android:hint="@string/confirmation" />
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+
+            <Button
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_height="wrap_content"
+                android:text="@string/enregistrer"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/inscrit"
+                android:textColor="@color/blanc"
+                android:background="@drawable/bord"/>
+
+            <TextView
+                android:id="@+id/sec"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:text="Se connecter"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

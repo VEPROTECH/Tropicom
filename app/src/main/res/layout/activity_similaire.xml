@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tropi.dvjl.tropicom.Annonceur.Similaire">
+
+
+    <android.support.v7.widget.RecyclerView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/list_annonce"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:fitsSystemWindows="true"
+        android:gravity="center"
+        android:headerDividersEnabled="false"
+        android:numColumns="auto_fit"
+        android:scrollbars="none"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/progess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/msg"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"/>
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:id="@+id/msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Problème de connexion !"
+        android:textSize="18dp"/>
+
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/actu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/msg"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:text="Actualiser"
+        />
+
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        app:floating_title="Ajouter"
+        app:floating_title_color="@android:color/white"
+        app:floating_background_color="@color/color_action"
+        android:id="@+id/action_flot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        app:floating_left_icon="@drawable/ic_add_btn"
+        />
+
+
+
+
+</RelativeLayout>

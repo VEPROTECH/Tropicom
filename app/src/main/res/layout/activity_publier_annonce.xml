@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tropi.dvjl.tropicom.Annonceur.PublierAnnonce">
+
+    <include layout="@layout/file_bar"
+        android:id="@+id/bar"/>
+
+    <ScrollView
+        android:layout_below="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+                <EditText
+                    android:id="@+id/phone"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:fontFamily="sans-serif-condensed"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/votre_num_ro_de_t_l_phone"
+                    android:drawableLeft="@drawable/ic_phone" />
+
+            <View
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimary"
+                android:text="Donnez le nom du produit"/>
+                <EditText
+                    android:background="@drawable/bg_edit"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/libelle"
+                    android:layout_width="match_parent"
+                    android:drawableLeft="@drawable/ic_title"
+                    android:fontFamily="sans-serif-condensed"
+                    android:drawablePadding="5dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/titre_de_l_annonce"/>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimary"
+                android:text="Quelle est la qualité de votre produit ?"/>
+                <EditText
+                    android:background="@drawable/bg_edit"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/qualite"
+                    android:layout_width="match_parent"
+                    android:fontFamily="sans-serif-condensed"
+                    android:drawableLeft="@drawable/ic_like"
+                    android:drawablePadding="5dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/qualit_optionel"/>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimary"
+                android:text="Votre produit utilise quel emballage ?"/>
+
+            <TextView
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:textColor="#fff"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bg_edit_cat"
+                android:padding="5dp"
+                android:text="@string/type_de_condionnement"
+                android:drawablePadding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_conditionnement"
+                android:drawableTint="@color/blanc"
+                android:drawableRight="@drawable/ic_next"/>
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_conditionnement"
+                android:drawablePadding="5dp"
+                android:hint="@string/type_de_condionnement"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/condionnement"
+                />
+
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/autr"
+                android:padding="10dp"
+                android:background="@drawable/bg_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:drawablePadding="5dp"
+                android:hint="Autre conditionnement"/>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+            <com.hbb20.CountryCodePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showNameCode="false"
+                android:id="@+id/pays"
+                app:ccp_defaultLanguage="ENGLISH"
+                android:fontFamily="sans-serif-condensed"
+                app:ccp_showFlag="true"
+                app:ccp_autoDetectLanguage="true"
+                app:ccp_showFullName="true"
+                app:ccp_showPhoneCode="false"
+                />
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/img_bg"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/city"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/ville_ou_village"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimary"
+                android:text="Donnez une bref description du produit"/>
+
+            <EditText
+                android:background="@drawable/bg_edit"
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="200px"
+                android:scrollbars="vertical"
+                android:hint="Bref description du produit..."
+                android:gravity="top"
+                android:padding="10dp"
+                android:inputType="textMultiLine"
+                />
+
+            <Button
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_height="wrap_content"
+                android:text="suivant"
+                android:id="@+id/btnsuivant"
+                android:textColor="@color/blanc"
+                android:background="@drawable/bord"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

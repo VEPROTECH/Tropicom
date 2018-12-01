@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    tools:context="com.tropi.dvjl.tropicom.ModifierCompte">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/imgProfil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+        <android.support.design.widget.FloatingActionButton
+            android:src="@drawable/ic_addtof"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="78dp"
+            android:id="@+id/action_flot"
+            android:layout_alignTop="@+id/imgProfil"
+            android:layout_alignLeft="@+id/imgProfil"
+            android:layout_alignStart="@+id/imgProfil"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/pays"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_showNameCode="false"
+            app:ccp_defaultLanguage="ENGLISH"
+            android:fontFamily="sans-serif-condensed"
+            app:ccp_showFlag="true"
+            app:ccp_autoDetectLanguage="true"
+            app:ccp_showFullName="true"
+            app:ccp_showPhoneCode="true"
+            />
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/img_bg"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/ville"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="La ville de résidence"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_height="wrap_content"
+            android:text="Modifier"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/modifier"
+            android:textColor="@color/blanc"
+            android:background="@drawable/bord"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
